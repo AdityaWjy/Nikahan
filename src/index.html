@@ -307,10 +307,6 @@
       </section>
       <!-- end of hero slider -->
 
-      <audio loop autoplay>
-        <source src="./allofme.mp3" type="audio/mpeg" />
-      </audio>
-
       <section class="section-padding flower">
         <div class="container">
           <div class="row">
@@ -450,6 +446,59 @@
         <!-- end container -->
       </section>
       <!-- end count-down-section -->
+
+      <section class="gallery-section py-5">
+        <div class="container">
+          <div class="row text-center mb-4">
+            <div class="col">
+              <h2 class="heading-font-type">Galeri</h2>
+              <p class="text-muted">Lihat koleksi foto terbaik kami</p>
+            </div>
+          </div>
+          <div class="row g-3">
+            <!-- Gambar 1 -->
+            <div class="col-6 col-sm-4 col-md-3">
+              <div class="gallery-item">
+                <img
+                  src="https://via.placeholder.com/300"
+                  class="img-fluid rounded"
+                  alt="Gambar 1"
+                />
+              </div>
+            </div>
+            <!-- Gambar 2 -->
+            <div class="col-6 col-sm-4 col-md-3">
+              <div class="gallery-item">
+                <img
+                  src="https://via.placeholder.com/300"
+                  class="img-fluid rounded"
+                  alt="Gambar 2"
+                />
+              </div>
+            </div>
+            <!-- Gambar 3 -->
+            <div class="col-6 col-sm-4 col-md-3">
+              <div class="gallery-item">
+                <img
+                  src="https://via.placeholder.com/300"
+                  class="img-fluid rounded"
+                  alt="Gambar 3"
+                />
+              </div>
+            </div>
+            <!-- Gambar 4 -->
+            <div class="col-6 col-sm-4 col-md-3">
+              <div class="gallery-item">
+                <img
+                  src="https://via.placeholder.com/300"
+                  class="img-fluid rounded"
+                  alt="Gambar 4"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!-- start getting-there-section -->
       <section
@@ -718,12 +767,26 @@
               class="theme-btn mb-3"
               data-dismiss="modal"
               id="open-play"
+              onclick="playAudio()"
             >
               <i
                 class="fa fa-envelope-open fi flaticon-favorite-heart-button"
               ></i>
               Buka Undangan
             </button>
+
+            <audio id="audioPlayer" loop autoplay>
+              <source src="allofme.mp3" type="audio/mpeg" />
+            </audio>
+
+            <script>
+              function playAudio() {
+                const audio = document.getElementById("audioPlayer");
+                audio
+                  .play()
+                  .catch((error) => console.error("Autoplay gagal:", error));
+              }
+            </script>
           </div>
         </div>
       </div>
